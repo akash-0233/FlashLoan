@@ -130,6 +130,7 @@ contract FlashLoan {
         uint256 trade2Coin = placeTrade(CROX, CAKE, trade1Coin);
         uint256 trade3Coin = placeTrade(CAKE, BUSD, trade2Coin);
 
+        console.log(loanAmount, trade1Coin, trade2Coin, trade3Coin);
         // Check Profitability
         bool profCheck = checkResult(repayAmount, trade3Coin);
         require(profCheck, "Arbitrage not profitable");
